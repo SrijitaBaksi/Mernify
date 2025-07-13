@@ -3,10 +3,11 @@ import jwt from 'jsonwebtoken'
 import User from '../models/User.js'
 
 const tokenOptions = {
-  httpOnly: true,
-  secure: process.env.NODE_ENV === 'production',
+  httpOnly: false,
+  secure: false,
   sameSite: 'Lax',
   maxAge: 10 * 24 * 60 * 60 * 1000, // 10 days
+  path: '/',
 };
 
 //signup

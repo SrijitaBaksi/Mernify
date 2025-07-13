@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import {createBrowserRouter, RouterProvider,Navigate} from 'react-router-dom';
 import './App.css'
 import Login from './auth/Login';
@@ -8,8 +8,8 @@ import Ananta from './pages/Dashboards/Ananta-dashboard';
 import Srijita from './pages/Dashboards/Srijita-dashboard';
 import Manna from './pages/Dashboards/Manna-dashboard';
 
-const router =createBrowserRouter([
- { path: '/', element: <Navigate to="/login" /> },
+const router = createBrowserRouter([
+ { path: '/', element: <Navigate to='/login' /> },
   { path: '/login', element: <Login /> },
   { path: '/signup', element: <SignUp /> },
 
