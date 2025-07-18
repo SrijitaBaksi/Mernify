@@ -105,14 +105,14 @@ const SignUp = () => {
 
           <button
             type="submit"
-            className="w-full py-3 rounded-xl bg-blue-600 text-white font-semibold text-lg hover:bg-blue-700 transform hover:scale-[1.02] transition duration-300"
+            className="w-full py-3 rounded-xl bg-blue-600 text-white font-semibold text-lg hover:bg-blue-700 cursor-pointer transform hover:scale-[1.02] transition duration-300"
           >
             Sign Up
           </button>
 
           <p className="text-center text-gray-600 text-sm pt-2">
             Already have an account?{" "}
-            <Link to="/login" className="text-blue-600 hover:underline font-medium">
+            <Link to="/login" className="text-blue-600 hover:underline cursor-pointer font-medium">
               Login here
             </Link>
           </p>
