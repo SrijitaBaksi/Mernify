@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element:<ProtectedLayout/>,
     children:[
        { path: '/ananta-dashboard/*', element: <Ananta /> },
-       { path: '/srijita-dashboard', element: <Srijita /> },
+       { path: '/srijita-dashboard/:stack/*', element: <Srijita /> },
        { path: '/manna-dashboard', element: <Manna /> },
     ]
   }
