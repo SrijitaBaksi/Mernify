@@ -13,6 +13,7 @@ export default function Sidebar({ selectedTech }) {
       { label: "Introduction", path: "/ananta-dashboard/introduction" },
       {label: "Render HTML", path: "/ananta-dashboard/renderHtml"},
       {label: "React Components", path: "/ananta-dashboard/reactComponents"},
+      {label: "React Props", path:"/ananta-dashboard/reactProps"},
       {
         label: "Hooks",
         subItems: [

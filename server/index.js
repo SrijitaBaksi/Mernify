@@ -11,9 +11,11 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://0d3c71fb2dcc.ngrok-free.app'
+    // 'https://71877679a140.ngrok-free.app'
   ],
-  credentials: true               
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // include OPTIONS
+  allowedHeaders: ['Content-Type', 'Authorization'],    // ensure headers are accepted             
 }));
 app.use(express.json());
 app.use(cookieParser());

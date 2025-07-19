@@ -23,9 +23,9 @@ const RenderHTML = () => {
       </section>
 
       <section>
-        {/* <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+        <h2 className="text-2xl font-semibold text-gray-700 mb-4">
           ⚙️ How to render html rendering in react
-        </h2> */}
+        </h2>
 
         <div className="mb-6">
           <h3 className="text-lg font-medium text-gray-600 mb-1">Step 1: Create a React App using Vite</h3>

@@ -7,6 +7,7 @@ import UseEffect from "../../AnantaContent/AnantaReact/Hooks/UseEffect";
 import { useState } from "react";
 import RenderHTML from "../../AnantaContent/AnantaReact/RenderHTML";
 import ReactComponents from "../../AnantaContent/AnantaReact/ReactComponents";
+import ReactProps from "../../AnantaContent/AnantaReact/ReactProps";
 
 export default function Ananta(){
   const [selectedTech, setSelectedTech] = useState("React.js")
@@ -23,6 +24,7 @@ export default function Ananta(){
             <Route path="introduction" element={<Introduction/>} />
             <Route path="renderHtml" element={<RenderHTML/>}/>
             <Route path="reactComponents" element={<ReactComponents/>}/>
+            <Route path="reactProps" element={<ReactProps/>}/>
             <Route path="hooks/useState" element={<UseState />} />
             <Route path="hooks/useEffect" element={<UseEffect/>}/>
             {/* <Route path="hooks/useEffect" element={<UseEffect />} />
