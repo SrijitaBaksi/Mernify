@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { useParams, Routes, Route, Navigate } from 'react-router-dom';
 import Intro from '../SrijitaReactTopics/Intro';
@@ -5,6 +6,8 @@ import JSX from '../SrijitaReactTopics/JSX';
 import Components from '../SrijitaReactTopics/Components';
 import SriNavbar from '../../srijita-components/SriNavbar';
 import SriSidebar from '../../srijita-components/SriSidebar';
+import FolderStructure from '../SrijitaReactTopics/Folder';
+import TailwindSetup from '../SrijitaReactTopics/TailwindSetup';
 
 
 const Srijita= () => {
@@ -15,6 +18,8 @@ const Srijita= () => {
       return(
         <>
           <Route path='intro' element={<Intro/>}/>
+          <Route path='folder' element={<FolderStructure/>}/>
+          <Route path='tailwind' element={<TailwindSetup/>}/>
           <Route path='jsx' element={<JSX/>}/>
           <Route path='components' element={<Components/>}/>
         </>
