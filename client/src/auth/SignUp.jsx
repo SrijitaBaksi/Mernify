@@ -24,7 +24,7 @@ const SignUp = () => {
       const res = await api.post('/auth/signup', formData);
       console.log("Signup successful:", res.data);
       setAuthUser(res.data.user);
-      navigate(`/${formData.dashboard}`);
+      navigate(`/${formData.dashboard}/react`);
     } catch (err) {
       console.error("Signup error:", err.response?.data || err.message);
     }

@@ -23,7 +23,7 @@ const Login = () => {
       const res = await api.post('/auth/login', formData);
       console.log('Login successful:', res.data);
       setAuthUser(res.data.user);
-      navigate(`/${formData.dashboard}`, {replace: true});
+      navigate(`/${formData.dashboard}/react`, {replace: true});
     } catch (err) {
       console.error('Login error:', err.response?.data || err.message);
     }
