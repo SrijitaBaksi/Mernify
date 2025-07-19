@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const ReactProps = () => {
+const ReactEvents = () => {
   const navigate = useNavigate();
 
   return (
@@ -184,4 +184,4 @@ const handleClick = () => {
   )
 }
 
-export default ReactProps
+export default ReactEvents
