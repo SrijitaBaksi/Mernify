@@ -11,6 +11,8 @@ import ReactProps from "../../AnantaContent/AnantaReact/ReactProps";
 import ReactEvents from "../../AnantaContent/AnantaReact/ReactEvents";
 import ReactConditional from "../../AnantaContent/AnantaReact/ReactConditional";
 import ReactLists from "../../AnantaContent/AnantaReact/ReactLists";
+import ReactRouter from "../../AnantaContent/AnantaReact/ReactRouter";
+import ReactMemo from "../../AnantaContent/AnantaReact/ReactMemo";
 
 export default function Ananta(){
   const [selectedTech, setSelectedTech] = useState("React.js")
@@ -31,6 +33,8 @@ export default function Ananta(){
             <Route path="reactEvents" element={<ReactEvents/>}/>
             <Route path="reactConditionals" element={<ReactConditional/>}/>
             <Route path="reactLists" element={<ReactLists/>}/>
+            <Route path="reactRouter" element={<ReactRouter/>}/>
+            <Route path="reactMemo" element={<ReactMemo/>}/>
 
 
             <Route path="hooks/useState" element={<UseState />} />
