@@ -2,6 +2,7 @@ import api from "../utils/apiRequest";
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ const Login = () => {
     password: '',
     dashboard: 'srijita-dashboard'
   });
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
   const { login: setAuthUser } = useAuth();
@@ -19,13 +21,34 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    const toastId = toast.loading("Logging into your account");
     try {
       const res = await api.post('/auth/login', formData);
       console.log('Login successful:', res.data);
       setAuthUser(res.data.user);
+      toast.update(toastId, {
+        render: `Redirecting to ${formData.dashboard}`,
+        type: "success",
+        isLoading: false,
+        autoClose: 2000
+      })
       navigate(`/${formData.dashboard}/react`, {replace: true});
     } catch (err) {
+       const errorMessage =
+        err.response?.data?.message || // Case: { message: 'Invalid credentials' }
+        (typeof err.response?.data === 'string' ? err.response.data : null) || // Case: string error
+        err.message || // Fallback error
+        "Logging in failed. Please try again"; // Final fallback
       console.error('Login error:', err.response?.data || err.message);
+      toast.update(toastId, {
+        render: errorMessage,
+        autoClose: 2000,
+        isLoading: false,
+        type: "error"
+      })
+    }finally{
+      setLoading(false);
     }
   };
 
@@ -81,9 +104,10 @@ const Login = () => {
 
           <button
             type="submit"
+            disabled={loading}
             className="w-full cursor-pointer py-3 rounded-xl bg-blue-600 text-white font-semibold text-lg hover:bg-blue-700 transform hover:scale-[1.02] transition duration-300"
           >
-            Login
+            {loading ? "Logging in": "login"}
           </button>
 
           <p className="text-center text-gray-600 text-sm pt-2">

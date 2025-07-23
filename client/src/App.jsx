@@ -7,6 +7,8 @@ import ProtectedLayout from './utils/protectedLayout';
 import Ananta from './pages/Dashboards/Ananta-dashboard';
 import Srijita from './pages/Dashboards/Srijita-dashboard';
 import Manna from './pages/Dashboards/Manna-dashboard';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
  { path: '/', element: <Navigate to='/login' /> },
@@ -16,7 +18,7 @@ const router = createBrowserRouter([
   {
     element:<ProtectedLayout/>,
     children:[
-       { path: '/ananta-dashboard/*', element: <Ananta /> },
+       { path: '/ananta-dashboard/react/*', element: <Ananta /> },
        { path: '/srijita-dashboard/:stack/*', element: <Srijita /> },
        { path: '/manna-dashboard', element: <Manna /> },
     ]
@@ -24,7 +26,12 @@ const router = createBrowserRouter([
 ])
 
 function App() {
- return <RouterProvider router={router}/>
+ return(
+  <>
+    <ToastContainer position="top-right" autoClose={3000} />
+    <RouterProvider router={router}/>
+  </>
+ )
 }
 
 export default App

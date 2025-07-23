@@ -2,6 +2,7 @@ import api from "../utils/apiRequest";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ const SignUp = () => {
     password: '',
     dashboard: 'srijita-dashboard',
   });
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
   const { login: setAuthUser } = useAuth();
@@ -20,13 +22,29 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    const toastId = toast.loading("Creating your account...");
     try {
       const res = await api.post('/auth/signup', formData);
-      console.log("Signup successful:", res.data);
       setAuthUser(res.data.user);
-      navigate(`/${formData.dashboard}/react`);
+      toast.update(toastId, {
+        render: "Account created successfully! 🎉",
+        type: "success",
+        isLoading: false,
+        autoClose: 2000,
+      });
+      setTimeout(() => {
+        navigate(`/${formData.dashboard}/react`);
+      }, 2000);
     } catch (err) {
-      console.error("Signup error:", err.response?.data || err.message);
+      toast.update(toastId, {
+        render: err.response?.data?.message || "Signup failed. Please try again.",
+        type: "error",
+        isLoading: false,
+        autoClose: 3000,
+      });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -105,9 +123,14 @@ const SignUp = () => {
 
           <button
             type="submit"
-            className="w-full py-3 rounded-xl bg-blue-600 text-white font-semibold text-lg hover:bg-blue-700 cursor-pointer transform hover:scale-[1.02] transition duration-300"
+            disabled={loading}
+            className={`w-full py-3 rounded-xl font-semibold text-lg transition duration-300 ${
+              loading
+                ? "bg-blue-400 cursor-not-allowed text-white"
+                : "bg-blue-600 hover:bg-blue-700 text-white hover:scale-[1.02]"
+            }`}
           >
-            Sign Up
+            {loading ? "Signing Up..." : "Sign Up"}
           </button>
 
           <p className="text-center text-gray-600 text-sm pt-2">
