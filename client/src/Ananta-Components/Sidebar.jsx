@@ -17,6 +17,8 @@ export default function Sidebar({ selectedTech }) {
       {label: "React Events", path: "/ananta-dashboard/reactEvents"},
       {label: "React Conditionals", path: "/ananta-dashboard/reactConditionals"},
       {label: "React Lists", path: "/ananta-dashboard/reactLists"},
+      {label: "React Router", path: "/ananta-dashboard/reactRouter"},
+      {label: "React Memo", path: "/ananta-dashboard/reactMemo"},
       {
         label: "Hooks",
         subItems: [

@@ -11,6 +11,10 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173',
+<<<<<<< Updated upstream
+=======
+    // 'https://mernify-alpha.vercel.app',
+>>>>>>> Stashed changes
     // 'https://71877679a140.ngrok-free.app'
   ],
   credentials: true,
