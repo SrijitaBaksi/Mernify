@@ -101,14 +101,14 @@ const Parent = () => {
       <div className="mt-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <button
           className="rounded-lg cursor-pointer bg-amber-300 hover:bg-amber-500 hover:text-yellow-950 p-3 w-full md:w-auto"
-          onClick={() => navigate('/ananta-dashboard/reactRouter')}
+          onClick={() => navigate('/ananta-dashboard/react/reactRouter')}
         >
           ← Back to React Router
         </button>
 
         <button
           className="rounded-lg cursor-pointer bg-amber-300 hover:bg-amber-500 hover:text-yellow-950 p-3 w-full md:w-auto"
-          onClick={() => navigate('/ananta-dashboard/reactForms')}
+          onClick={() => navigate('/ananta-dashboard/react/reactForms')}
         >
           React Forms →
         </button>

@@ -108,7 +108,7 @@ export default Greeting;
             <div className="mt-4 flex flex-col md:flex-row items-center justify-between gap-4">
               <button
                 className="rounded-lg cursor-pointer bg-amber-50 hover:bg-amber-500 hover:text-yellow-950 p-3 w-full md:w-auto"
-                onClick={() => navigate('/ananta-dashboard/renderHtml')}
+                onClick={() => navigate('/ananta-dashboard/react/renderHtml')}
               >
                 ← Back
               </button>
@@ -117,7 +117,7 @@ export default Greeting;
 
               <button
                 className="rounded-lg cursor-pointer bg-amber-50 hover:bg-amber-500 hover:text-yellow-950 p-3 w-full md:w-auto"
-                onClick={() => navigate('/ananta-dashboard/reactProps')}
+                onClick={() => navigate('/ananta-dashboard/react/reactProps')}
               >
                 React Props →
               </button>

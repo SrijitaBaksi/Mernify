@@ -10,34 +10,34 @@ export default function Sidebar({ selectedTech }) {
 
   const sidebarContent = {
     "React.js": [
-      { label: "Introduction", path: "/ananta-dashboard/introduction" },
-      {label: "Render HTML", path: "/ananta-dashboard/renderHtml"},
-      {label: "React Components", path: "/ananta-dashboard/reactComponents"},
-      {label: "React Props", path:"/ananta-dashboard/reactProps"},
-      {label: "React Events", path: "/ananta-dashboard/reactEvents"},
-      {label: "React Conditionals", path: "/ananta-dashboard/reactConditionals"},
-      {label: "React Lists", path: "/ananta-dashboard/reactLists"},
-      {label: "React Router", path: "/ananta-dashboard/reactRouter"},
-      {label: "React Memo", path: "/ananta-dashboard/reactMemo"},
+      { label: "Introduction", path: "/ananta-dashboard/react/introduction" },
+      {label: "Render HTML", path: "/ananta-dashboard/react/renderHtml"},
+      {label: "React Components", path: "/ananta-dashboard/react/reactComponents"},
+      {label: "React Props", path:"/ananta-dashboard/react/reactProps"},
+      {label: "React Events", path: "/ananta-dashboard/react/reactEvents"},
+      {label: "React Conditionals", path: "/ananta-dashboard/react/reactConditionals"},
+      {label: "React Lists", path: "/ananta-dashboard/react/reactLists"},
+      {label: "React Router", path: "/ananta-dashboard/react/reactRouter"},
+      {label: "React Memo", path: "/ananta-dashboard/react/reactMemo"},
       {
         label: "Hooks",
         subItems: [
-          { label: "useState", path: "/ananta-dashboard/hooks/useState" },
-          { label: "useEffect", path: "/ananta-dashboard/hooks/useEffect" }
+          { label: "useState", path: "/ananta-dashboard/react/hooks/useState" },
+          { label: "useEffect", path: "/ananta-dashboard/react/hooks/useEffect" }
         ]
       }
     ],
     "Node.js": [
-      { label: "Intro to Node", path: "/ananta-dashboard/node/intro" },
-      { label: "File System", path: "/ananta-dashboard/node/fs" }
+      { label: "Intro to Node", path: "/ananta-dashboard/react/node/intro" },
+      { label: "File System", path: "/ananta-dashboard/react/node/fs" }
     ],
     "Express.js": [
-      { label: "Intro to Express", path: "/ananta-dashboard/express/intro" },
-      { label: "Middlewares", path: "/ananta-dashboard/express/middleware" }
+      { label: "Intro to Express", path: "/ananta-dashboard/react/express/intro" },
+      { label: "Middlewares", path: "/ananta-dashboard/react/express/middleware" }
     ],
     "MongoDB": [
-      { label: "Mongo Basics", path: "/ananta-dashboard/mongodb/basics" },
-      { label: "Aggregation", path: "/ananta-dashboard/mongodb/aggregation" }
+      { label: "Mongo Basics", path: "/ananta-dashboard/react/mongodb/basics" },
+      { label: "Aggregation", path: "/ananta-dashboard/react/mongodb/aggregation" }
     ]
   };
 
