@@ -11,9 +11,9 @@ export default function Sidebar({ selectedTech }) {
   const sidebarContent = {
     "React.js": [
       {label: "Introduction", path: "/ananta-dashboard/react/introduction" },
-      {label: "Connect Tailwind with react", path: "/ananta-dashboard/connectTailwind"},
+      {label: "Connect Tailwind with react", path: "/ananta-dashboard/react/connectTailwind"},
       {label: "Render HTML", path: "/ananta-dashboard/react/renderHtml"},
-      {label: "React Class Components", path: "/ananta-dashboard/classComponents"},
+      {label: "React Class Components", path: "/ananta-dashboard/react/classComponents"},
       {label: "React Components", path: "/ananta-dashboard/react/reactComponents"},
       {label: "React Props", path:"/ananta-dashboard/react/reactProps"},
       {label: "React Events", path: "/ananta-dashboard/react/reactEvents"},
@@ -21,13 +21,12 @@ export default function Sidebar({ selectedTech }) {
       {label: "React Lists", path: "/ananta-dashboard/react/reactLists"},
       {label: "React Router", path: "/ananta-dashboard/react/reactRouter"},
       {label: "React Memo", path: "/ananta-dashboard/react/reactMemo"},
-      { label: "Introduction", path: "/ananta-dashboard/introduction" },
       {
         label: "Hooks",
         subItems: [
-          { label: "Hooks Definition", path: "/ananta-dashboard/hooks/hooksDefine"},
-          { label: "useState", path: "/ananta-dashboard/hooks/useState" },
-          { label: "useEffect", path: "/ananta-dashboard/hooks/useEffect" }
+          { label: "Hooks Definition", path: "/ananta-dashboard/react/hooks/hooksDefine"},
+          { label: "useState", path: "/ananta-dashboard/react/hooks/useState" },
+          { label: "useEffect", path: "/ananta-dashboard/react/hooks/useEffect" }
         ]
       }
     ],

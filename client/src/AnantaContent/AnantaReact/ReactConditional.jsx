@@ -133,7 +133,7 @@ Your garage is empty.
       <div className="mt-4 flex flex-col md:flex-row items-center justify-between gap-4">
         <button
           className="rounded-lg cursor-pointer bg-amber-300 hover:bg-amber-500 hover:text-yellow-950 p-3 w-full md:w-auto"
-          onClick={() => navigate('/ananta-dashboard/react/reactProps')}
+          onClick={() => navigate('/ananta-dashboard/react/reactEvents')}
         >
           ← Back
         </button>
