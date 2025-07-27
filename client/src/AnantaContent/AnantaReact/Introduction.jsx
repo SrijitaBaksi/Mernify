@@ -66,9 +66,9 @@ const Introduction = () => {
 
               <button
                 className="rounded-lg cursor-pointer bg-amber-300 hover:bg-amber-500 hover:text-yellow-950 p-3 w-full md:w-auto"
-                onClick={() => navigate('/ananta-dashboard/react/renderHtml')}
+                onClick={() => navigate('/ananta-dashboard/connectTailwind')}
               >
-                Render HTML →
+                Connect Tailwind →
               </button>
             </div>
       </section>
