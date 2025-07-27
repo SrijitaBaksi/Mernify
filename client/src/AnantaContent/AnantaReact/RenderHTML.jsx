@@ -118,22 +118,22 @@ export default App;
         </div>
 
         <div className="mt-4 flex flex-col md:flex-row items-center justify-between gap-4">
-              <button
-                className="rounded-lg cursor-pointer bg-amber-300 hover:bg-amber-500 hover:text-yellow-950 p-3 w-full md:w-auto"
-                onClick={() => navigate("/ananta-dashboard/introduction")}
-              >
-                ← Back
-              </button>
+          <button
+            className="rounded-lg cursor-pointer bg-amber-300 hover:bg-amber-500 hover:text-yellow-950 p-3 w-full md:w-auto"
+            onClick={() => navigate("/ananta-dashboard/connectTailwind")}
+          >
+            ← Back
+          </button>
 
-              {/* <p className="text-center md:text-left">Move on to <strong>React Components</strong> next.</p> */}
+          {/* <p className="text-center md:text-left">Move on to <strong>React Components</strong> next.</p> */}
 
-              <button
-                className="rounded-lg cursor-pointer bg-amber-300 hover:bg-amber-500 hover:text-yellow-950 p-3 w-full md:w-auto"
-                onClick={() => navigate('/ananta-dashboard/reactComponents')}
-              >
-                React Components →
-              </button>
-            </div>
+          <button
+            className="rounded-lg cursor-pointer bg-amber-300 hover:bg-amber-500 hover:text-yellow-950 p-3 w-full md:w-auto"
+            onClick={() => navigate('/ananta-dashboard/classComponents')}
+          >
+            React Class Components →
+          </button>
+        </div>
         
       </section>
     </div>
