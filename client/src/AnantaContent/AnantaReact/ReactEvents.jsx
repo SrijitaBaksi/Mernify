@@ -166,14 +166,14 @@ const handleClick = () => {
             
           <button
             className="rounded-lg cursor-pointer bg-amber-300 hover:bg-amber-500 hover:text-yellow-950 p-3 w-full md:w-auto"
-            onClick={() => navigate('/ananta-dashboard/reactProps')}
+            onClick={() => navigate('/ananta-dashboard/react/reactProps')}
           >
             ← Back
           </button>
 
           <button
             className="rounded-lg cursor-pointer bg-amber-300 hover:bg-amber-500 hover:text-yellow-950 p-3 w-full md:w-auto"
-            onClick={() => navigate('/ananta-dashboard/reactConditionals')}
+            onClick={() => navigate('/ananta-dashboard/react/reactConditionals')}
           >
             React Conditionals →
           </button>
