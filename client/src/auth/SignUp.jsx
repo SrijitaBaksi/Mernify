@@ -2,6 +2,8 @@ import api from "../utils/apiRequest";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import  {toast, ToastContainer} from "react-toastify"
+import confetti from "canvas-confetti";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +12,8 @@ const SignUp = () => {
     password: '',
     dashboard: 'srijita-dashboard',
   });
+
+
 
   const navigate = useNavigate();
   const { login: setAuthUser } = useAuth();
@@ -24,11 +28,45 @@ const SignUp = () => {
       const res = await api.post('/auth/signup', formData);
       console.log("Signup successful:", res.data);
       setAuthUser(res.data.user);
+      showWelcomeToast();
       navigate(`/${formData.dashboard}`);
     } catch (err) {
       console.error("Signup error:", err.response?.data || err.message);
     }
   };
+
+  const showWelcomeToast = ()=>{
+      toast.success("🎉 Yayyy! You came for stoody!",{
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "colored",
+      })
+  
+      const duration = 5 * 1000;
+      const animationEnd = Date.now() + duration;
+      
+      const interval = setInterval(()=>{
+        if(Date.now() > animationEnd){
+          clearInterval(interval);
+          return;
+        }
+        confetti({
+          particleCount: 40,
+          startVelocity: 30,
+          spread: 360,
+          ticks: 60,
+          origin: {
+            x: Math.random(),
+            y: Math.random() - 0.2, // shoot from top
+          },
+        });
+      },250)
+    }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-100 to-blue-200 px-4 py-10">

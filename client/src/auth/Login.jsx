@@ -2,6 +2,8 @@ import api from "../utils/apiRequest";
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import  {toast, ToastContainer} from "react-toastify"
+import confetti from "canvas-confetti";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -23,11 +25,45 @@ const Login = () => {
       const res = await api.post('/auth/login', formData);
       console.log('Login successful:', res.data);
       setAuthUser(res.data.user);
+      showWelcomeToast();
       navigate(`/${formData.dashboard}`, {replace: true});
     } catch (err) {
       console.error('Login error:', err.response?.data || err.message);
     }
   };
+
+  const showWelcomeToast = ()=>{
+    toast.success("🎉 Yayyy! You came for stoody!",{
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+      theme: "colored",
+    })
+
+    const duration = 5 * 1000;
+    const animationEnd = Date.now() + duration;
+    
+    const interval = setInterval(()=>{
+      if(Date.now() > animationEnd){
+        clearInterval(interval);
+        return;
+      }
+      confetti({
+        particleCount: 40,
+        startVelocity: 30,
+        spread: 360,
+        ticks: 60,
+        origin: {
+          x: Math.random(),
+          y: Math.random() - 0.2, // shoot from top
+        },
+      });
+    },250)
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-200 px-4 py-8">
