@@ -31,7 +31,8 @@ export default function Sidebar({ selectedTech }) {
         subItems: [
           { label: "Hooks Definition", path: "/ananta-dashboard/react/hooks/hooksDefine" },
           { label: "useState", path: "/ananta-dashboard/react/hooks/useState" },
-          { label: "useEffect", path: "/ananta-dashboard/react/hooks/useEffect" }
+          { label: "useEffect", path: "/ananta-dashboard/react/hooks/useEffect" },
+          {label: "useContext", path: "/ananta-dashboard/react/hooks/useContext"},
         ]
       }
     ],
