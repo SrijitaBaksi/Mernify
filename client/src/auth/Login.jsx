@@ -75,7 +75,7 @@ const Login = () => {
             >
               <option value="ananta-dashboard">Ananta Dashboard</option>
               <option value="srijita-dashboard">Srijita Dashboard</option>
-              <option value="manna-dashboard">Manna Dashboard</option>
+              <option value="Soumya-dashboard">Soumya Dashboard</option>
             </select>
           </div>
 
