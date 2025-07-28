@@ -16,6 +16,7 @@ import ReactMemo from "../../AnantaContent/AnantaReact/ReactMemo";
 import ConnectTailwind from "../../AnantaContent/AnantaReact/ConnectTailwind";
 import ClassComponents from "../../AnantaContent/AnantaReact/ClassComponents";
 import DefineHooks from "../../AnantaContent/AnantaReact/Hooks/DefineHooks";
+import UseContext from "../../AnantaContent/AnantaReact/Hooks/UseContext";
 
 export default function Ananta(){
   const [selectedTech, setSelectedTech] = useState("React.js")
@@ -44,6 +45,7 @@ export default function Ananta(){
             <Route path="hooks/hooksDefine" element={<DefineHooks/>}/>
             <Route path="hooks/useState" element={<UseState />} />
             <Route path="hooks/useEffect" element={<UseEffect/>}/>
+            <Route path="hooks/useContext" element={<UseContext/>}/>
             {/* <Route path="hooks/useEffect" element={<UseEffect />} />
             <Route path="hooks/useContext" element={<UseContext />} /> */}
 
