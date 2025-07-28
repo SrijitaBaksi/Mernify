@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/ananta-dashboard/react/(.*)", "destination": "/" }
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
