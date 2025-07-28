@@ -31,6 +31,8 @@ const SignUp = () => {
     try {
       const res = await api.post('/auth/signup', formData);
       setAuthUser(res.data.user);
+      showWelcomeToast();
+      navigate(`/${formData.dashboard}`);
       toast.update(toastId, {
         render: "Account created successfully! 🎉",
         type: "success",

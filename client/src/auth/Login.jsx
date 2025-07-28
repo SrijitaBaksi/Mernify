@@ -5,7 +5,6 @@ import { useAuth } from "../context/AuthContext";
 import  {toast, ToastContainer} from "react-toastify"
 import confetti from "canvas-confetti";
 
-
 const Login = () => {
   const [formData, setFormData] = useState({
     email: '',
@@ -29,6 +28,8 @@ const Login = () => {
       const res = await api.post('/auth/login', formData);
       console.log('Login successful:', res.data);
       setAuthUser(res.data.user);
+      showWelcomeToast();
+      navigate(`/${formData.dashboard}`, {replace: true});
       toast.update(toastId, {
         render: `Redirecting to ${formData.dashboard}`,
         type: "success",
