@@ -37,7 +37,6 @@ const Login = () => {
         autoClose: 2000
       })
       navigate(`/${formData.dashboard}/react`, {replace: true});
-      showWelcomeToast();
     } catch (err) {
        const errorMessage =
         err.response?.data?.message || // Case: { message: 'Invalid credentials' }

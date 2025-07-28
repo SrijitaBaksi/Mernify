@@ -42,7 +42,6 @@ const SignUp = () => {
       setTimeout(() => {
         navigate(`/${formData.dashboard}/react`);
       }, 2000);
-      showWelcomeToast();
     } catch (err) {
       toast.update(toastId, {
         render: err.response?.data?.message || "Signup failed. Please try again.",
