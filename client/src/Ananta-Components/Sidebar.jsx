@@ -63,7 +63,6 @@ export default function Sidebar({ selectedTech }) {
 
   return (
     <>
-      {/* Toggle Button (Mobile) */}
       <button
         className="md:hidden p-2 fixed top-4 left-4 bg-gray-800 text-white z-50 rounded"
         onClick={() => setCollapsed(!collapsed)}
