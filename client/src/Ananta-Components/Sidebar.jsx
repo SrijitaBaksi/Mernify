@@ -7,6 +7,7 @@ export default function Sidebar({ selectedTech }) {
 
   const [collapsed, setCollapsed] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   const sidebarContent = {
     "React.js": [
@@ -44,6 +45,11 @@ export default function Sidebar({ selectedTech }) {
     ]
   };
 
+  const handleLogout = ()=>{
+    document.cookie = "token=; Max-Age=0; path=/;";
+    window.location.reload();
+  }
+
   const navItems = sidebarContent[selectedTech] || [];
 
   return (
@@ -63,7 +69,7 @@ export default function Sidebar({ selectedTech }) {
         }`}
       >
         {/* <div className="text-green-500 p-6 text-xl font-bold">MERNify</div> */}
-        <nav className="px-4 pt-6">
+        <nav className="px-4 pt-6 overflow-y-auto scrollbar-hide h-[calc(100vh-60px)]">
           {navItems.map((item, idx) => {
             const isParentActive =
               item.subItems &&
@@ -127,12 +133,36 @@ export default function Sidebar({ selectedTech }) {
 
         {/* Logout */}
         <div className="p-4 hover:bg-gray-800 cursor-pointer">
-          <button className="flex items-center gap-2 cursor-pointer hover:text-red-500">
+          <button onClick={()=>setShowModal(true)} className="flex items-center gap-2 cursor-pointer hover:text-red-500">
             <FaSignOutAlt />
             Logout
           </button>
         </div>
       </div>
+
+      {/* Showing the modal */}
+          {showModal && (
+            <div className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex justify-center items-center z-50">
+              <div className="bg-white text-black p-6 rounded-lg shadow-xl w-80 text-center">
+                <h2 className="text-xl font-semibold mb-4">Don't go 😢</h2>
+                <p className="mb-4">Are you sure you want to leave us like this?</p>
+                <div className="flex justify-between gap-4">
+                  <button
+                    onClick={handleLogout}
+                    className="bg-red-500 cursor-pointer hover:bg-red-600 text-white px-4 py-2 rounded w-full"
+                  >
+                    Final Bye 👋
+                  </button>
+                  <button
+                    onClick={() => setShowModal(false)}
+                    className="bg-gray-300 cursor-pointer hover:bg-gray-400 px-4 py-2 rounded w-full"
+                  >
+                    Back 🙃
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
     </>
   );
 }
