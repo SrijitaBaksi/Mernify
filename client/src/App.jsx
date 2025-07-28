@@ -6,9 +6,12 @@ import SignUp from './auth/SignUp';
 import ProtectedLayout from './utils/protectedLayout';
 import Ananta from './pages/Dashboards/Ananta-dashboard';
 import Srijita from './pages/Dashboards/Srijita-dashboard';
-import Manna from './pages/Dashboards/Manna-dashboard';
+
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Soumya from './pages/Dashboards/Soumya-dashboard';
+
+
 
 const router = createBrowserRouter([
  { path: '/', element: <Navigate to='/login' /> },
@@ -20,11 +23,10 @@ const router = createBrowserRouter([
     children:[
        { path: '/ananta-dashboard/react/*', element: <Ananta /> },
        { path: '/srijita-dashboard/:stack/*', element: <Srijita /> },
-       { path: '/manna-dashboard', element: <Manna /> },
+       { path: '/Soumya-dashboard/*', element: <Soumya /> },
     ]
   }
 ])
-
 function App() {
  return(
   <>

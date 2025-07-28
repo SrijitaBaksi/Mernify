@@ -12,7 +12,6 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'https://mernify-alpha.vercel.app',
-    // 'https://71877679a140.ngrok-free.app'
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // include OPTIONS
