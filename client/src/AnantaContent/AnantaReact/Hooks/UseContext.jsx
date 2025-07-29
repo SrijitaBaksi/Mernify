@@ -104,9 +104,9 @@ const UseContext = () => {
 
           <button
             className="rounded-lg cursor-pointer bg-amber-300 hover:bg-amber-500 hover:text-yellow-950 p-3 w-full md:w-auto"
-            onClick={() => navigate('/ananta-dashboard/react/hooks/useReducer')}
+            onClick={() => navigate('/ananta-dashboard/react/hooks/useRef')}
           >
-            useReducer →
+            useRef →
           </button>
         </div>
       </div>
