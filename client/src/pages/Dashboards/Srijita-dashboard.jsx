@@ -8,6 +8,12 @@ import SriNavbar from '../../srijita-components/SriNavbar';
 import SriSidebar from '../../srijita-components/SriSidebar';
 import FolderStructure from '../SrijitaReactTopics/Folder';
 import TailwindSetup from '../SrijitaReactTopics/TailwindSetup';
+import ExportsInReact from '../SrijitaReactTopics/ExportsInReact';
+import BuildTools from '../SrijitaReactTopics/Buildtools';
+import Props from '../SrijitaReactTopics/Props';
+import Events from '../SrijitaReactTopics/Events';
+import ConditionalRendering from '../SrijitaReactTopics/ConditionalRendering';
+import Lists from '../SrijitaReactTopics/Lists';
 
 
 const Srijita= () => {
@@ -22,6 +28,12 @@ const Srijita= () => {
           <Route path='tailwind' element={<TailwindSetup/>}/>
           <Route path='jsx' element={<JSX/>}/>
           <Route path='components' element={<Components/>}/>
+          <Route path='exports' element={<ExportsInReact/>}/>
+          <Route path='buildtools' element={<BuildTools/>}/>
+          <Route path='props' element={<Props/>}/>
+          <Route path='events' element={<Events/>}/>
+          <Route path='conditional-rendering' element={<ConditionalRendering/>}/>
+          <Route path='lists' element={<Lists/>}/>
         </>
       )
     }

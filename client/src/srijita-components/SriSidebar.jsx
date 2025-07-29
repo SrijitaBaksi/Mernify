@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 const topics={
-    react:['intro','folder','tailwind','jsx','components'],
+    react:['intro','folder','tailwind','buildtools','jsx','components','exports','props','events','conditional-rendering','lists'],
     express:['intro'],
     node:['intro'],
     mongodb:['intro'],
