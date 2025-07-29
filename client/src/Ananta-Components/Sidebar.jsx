@@ -33,6 +33,9 @@ export default function Sidebar({ selectedTech }) {
           { label: "useState", path: "/ananta-dashboard/react/hooks/useState" },
           { label: "useEffect", path: "/ananta-dashboard/react/hooks/useEffect" },
           {label: "useContext", path: "/ananta-dashboard/react/hooks/useContext"},
+          {label: "useRef", path: "/ananta-dashboard/react/hooks/useRef"},
+          {label: "useReducer", path: "/ananta-dashboard/react/hooks/useReducer"},
+          {label: "useCallBack", path: "/ananta-dashboard/react/hooks/useCallBack"},
         ]
       }
     ],
